@@ -1,4 +1,5 @@
 import os
+os.system("chcp 65001")  # 设置命令行为 UTF-8 编码
 import sys
 import time
 import subprocess
