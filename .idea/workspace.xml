@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ade0ccaf-004c-404c-b4d0-c6c2712ab91f" name="Default Changelist" comment="Default Changelist">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEst/auto_git_push.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_git_push/auto_git_push.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Yolo_v8.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Yolo_v8.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +42,12 @@
     "Python.train.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/Yolo_model/Yolo_v8",
+    "last_opened_file_path": "D:/Yolo_model/auto_git_push_",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "File.Encoding",
+    "settings.editor.selected.configurable": "com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -59,8 +59,8 @@
       <recent name="D:\Yolo_model\Yolo_v8" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.auto_git_push (1)">
-    <configuration name="MainProgram" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.auto_git_push (2)">
+    <configuration name="auto_git_push (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Yolo_v8" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -69,35 +69,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/auto_git_push" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MainProgram.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="true" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="auto_git_push (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Yolo_v8" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TEst" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TEst/auto_git_push.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/auto_git_push/auto_git_push.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -176,19 +153,17 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.auto_git_push (1)" />
+      <item itemvalue="Python.auto_git_push (2)" />
       <item itemvalue="Python.auto_git_push" />
       <item itemvalue="Python.train" />
       <item itemvalue="Python.test" />
-      <item itemvalue="Python.MainProgram" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.auto_git_push (1)" />
+        <item itemvalue="Python.auto_git_push (2)" />
         <item itemvalue="Python.auto_git_push" />
         <item itemvalue="Python.train" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.MainProgram" />
       </list>
     </recent_temporary>
   </component>
@@ -218,7 +193,7 @@
       <workItem from="1710952959297" duration="241000" />
       <workItem from="1729749967364" duration="3569000" />
       <workItem from="1742729370077" duration="44000" />
-      <workItem from="1742729424112" duration="364000" />
+      <workItem from="1742729424112" duration="1872000" />
     </task>
     <task id="LOCAL-00001" summary="Default Changelist">
       <option name="closed" value="true" />
@@ -228,7 +203,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742721726027</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Default Changelist">
+      <option name="closed" value="true" />
+      <created>1742729816166</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1742729816166</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
