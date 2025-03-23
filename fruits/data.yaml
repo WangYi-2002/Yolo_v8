@@ -1,0 +1,6 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 16
+names: ['Blueberries', 'Hami Melon', 'Mango', 'Sakya fruit', 'apple', 'banana', 'grape', 'guava', 'mangosteen', 'orange', 'pear', 'pineapple', 'pitaya', 'strawberry', 'tomato', 'watermelon']
