@@ -82,15 +82,25 @@ def monitor_changes(icon):
 # === 手动提交功能 ===
 def manual_commit(icon, item):
     try:
+        # 获取提交原因
+        commit_reason = input("请输入手动提交的原因: ")  # 在命令行获取输入
+
+        # 如果用户没有输入原因，使用默认提交信息
+        if not commit_reason:
+            commit_reason = "手动提交，无明确原因"
+
         update_status(icon, "手动提交中...")
         print(f"手动提交中... {time.strftime('%H:%M:%S')}")
         os.chdir(project_path)
         subprocess.run(["git", "add", "."], check=True)
-        commit_msg = f"手动提交 {time.strftime('%Y-%m-%d %H:%M:%S')}"
+
+        # 创建带有原因的提交消息
+        commit_msg = f"手动提交: {commit_reason} ({time.strftime('%Y-%m-%d %H:%M:%S')})"
         subprocess.run(["git", "commit", "-m", commit_msg], check=True)
         subprocess.run(["git", "push", "origin", branch_name], check=True)
+
         update_status(icon, "手动提交成功")
-        print(f"[{time.strftime('%H:%M:%S')}] 手动提交成功")  # 改为不含 Unicode 字符
+        print(f"[{time.strftime('%H:%M:%S')}] 手动提交成功: {commit_reason}")
     except subprocess.CalledProcessError as e:
         update_status(icon, "手动提交失败")
         print(f"[{time.strftime('%H:%M:%S')}] 手动提交失败: {e}")
