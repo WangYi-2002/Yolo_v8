@@ -90,11 +90,12 @@ def manual_commit(icon, item):
         subprocess.run(["git", "commit", "-m", commit_msg], check=True)
         subprocess.run(["git", "push", "origin", branch_name], check=True)
         update_status(icon, "手动提交成功")
-        print(f"[{time.strftime('%H:%M:%S')}] ✅ 手动提交成功")
+        print(f"[{time.strftime('%H:%M:%S')}] 手动提交成功")  # 改为不含 Unicode 字符
     except subprocess.CalledProcessError as e:
         update_status(icon, "手动提交失败")
-        print(f"[{time.strftime('%H:%M:%S')}] ⚠️ 手动提交失败: {e}")
+        print(f"[{time.strftime('%H:%M:%S')}] 手动提交失败: {e}")
         winsound.Beep(1000, 500)  # 发出错误提示音
+
 
 # === 托盘图标和菜单设置 ===
 def setup_tray():
