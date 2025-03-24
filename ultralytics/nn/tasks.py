@@ -317,31 +317,31 @@ class ClassificationModel(BaseModel):
 # Functions ------------------------------------------------------------------------------------------------------------
 
 
+import torch
+import pickle
+from torch.serialization import add_safe_globals
+from torch.nn import Sequential  # 用于安全白名单
+from ultralytics.nn.tasks import DetectionModel
+
+# 添加常用安全类型
+add_safe_globals([DetectionModel, Sequential, set, tuple, list, dict, float, int, str])
+
 def torch_safe_load(weight):
-    """
-    This function attempts to load a PyTorch model with the torch.load() function. If a ModuleNotFoundError is raised, it
-    catches the error, logs a warning message, and attempts to install the missing module via the check_requirements()
-    function. After installation, the function again attempts to load the model using torch.load().
-
-    Args:
-        weight (str): The file path of the PyTorch model.
-
-    Returns:
-        The loaded PyTorch model.
-    """
     from ultralytics.yolo.utils.downloads import attempt_download_asset
+    from ultralytics.yolo.utils.checks import check_requirements
+    from ultralytics.yolo.utils import LOGGER
 
-    file = attempt_download_asset(weight)  # search online if missing locally
+    file = attempt_download_asset(weight)  # 下载或获取权重文件
     try:
-        return torch.load(file, map_location='cpu')  # load
+        return torch.load(file, map_location='cpu', weights_only=True)
     except ModuleNotFoundError as e:
-        if e.name == 'omegaconf':  # e.name is missing module name
-            LOGGER.warning(f"WARNING ⚠️ {weight} requires {e.name}, which is not in ultralytics requirements."
-                           f"\nAutoInstall will run now for {e.name} but this feature will be removed in the future."
-                           f"\nRecommend fixes are to train a new model using updated ultraltyics package or to "
-                           f"download updated models from https://github.com/ultralytics/assets/releases/tag/v0.0.0")
-        check_requirements(e.name)  # install missing module
-        return torch.load(file, map_location='cpu')  # load
+        LOGGER.warning(f"⚠️ 缺失模块 {e.name}，尝试自动安装...")
+        check_requirements(e.name)
+        return torch.load(file, map_location='cpu', weights_only=True)
+    except pickle.UnpicklingError as e:
+        LOGGER.warning(f"⚠️ weights_only 加载失败，尝试不安全加载（确保模型来源可信）...")
+        return torch.load(file, map_location='cpu', weights_only=False)
+
 
 
 def attempt_load_weights(weights, device=None, inplace=True, fuse=False):
