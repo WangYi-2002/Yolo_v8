@@ -20,7 +20,7 @@ class Config:
     # 基础配置
     PROJECT_PATH = r"D:\Yolo_model\Yolo_v8"  # 项目路径
     BRANCH_NAME = "main"  # 默认分支
-    CHECK_INTERVAL = 60  # 检测间隔（秒）
+    CHECK_INTERVAL = 300  # 检测间隔（秒）
 
     # 提交模板
     COMMIT_TEMPLATES = {

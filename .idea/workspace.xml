@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ade0ccaf-004c-404c-b4d0-c6c2712ab91f" name="Default Changelist" comment="Default Changelist">
-      <change afterPath="$PROJECT_DIR$/clean_labels.py" afterDir="false" />
+    <list default="true" id="ade0ccaf-004c-404c-b4d0-c6c2712ab91f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_git_push/auto_git_push.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_git_push/auto_git_push.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fruits/data.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/fruits/data.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fruits/train/labels.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fruits/train/labels/riped_tomato_3_jpeg.rf.e5d6429ca1de997c43660756eddfd7fa.txt" beforeDir="false" afterPath="$PROJECT_DIR$/fruits/train/labels/riped_tomato_3_jpeg.rf.e5d6429ca1de997c43660756eddfd7fa.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fruits/valid/labels.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/search.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,27 +40,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python.auto_git_push (1).executor": "Run",
-    "Python.auto_git_push (2).executor": "Run",
-    "Python.auto_git_push.executor": "Run",
-    "Python.clean_labels.executor": "Run",
-    "Python.search.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.train.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/Yolo_model/Yolo_v8/imgs/Snipaste_2025-03-23_20-12-45.png",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.auto_git_push (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.auto_git_push (2).executor&quot;: &quot;Run&quot;,
+    &quot;Python.auto_git_push.executor&quot;: &quot;Run&quot;,
+    &quot;Python.clean_labels.executor&quot;: &quot;Run&quot;,
+    &quot;Python.search.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.train.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Yolo_model/Yolo_v8/imgs/Snipaste_2025-03-23_20-12-45.png&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\MyCVProgram\TrafficSignDetection" />
@@ -185,16 +189,16 @@
       <item itemvalue="Python.auto_git_push (2)" />
       <item itemvalue="Python.clean_labels" />
       <item itemvalue="Python.search" />
-      <item itemvalue="Python.train" />
       <item itemvalue="Python.test" />
+      <item itemvalue="Python.train" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.train" />
+        <item itemvalue="Python.auto_git_push (2)" />
         <item itemvalue="Python.clean_labels" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.search" />
-        <item itemvalue="Python.auto_git_push (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -224,7 +228,9 @@
       <workItem from="1710952959297" duration="241000" />
       <workItem from="1729749967364" duration="3569000" />
       <workItem from="1742729370077" duration="44000" />
-      <workItem from="1742729424112" duration="3747000" />
+      <workItem from="1742729424112" duration="3994000" />
+      <workItem from="1742782119017" duration="24000" />
+      <workItem from="1742783733048" duration="3163000" />
     </task>
     <task id="LOCAL-00001" summary="Default Changelist">
       <option name="closed" value="true" />
@@ -271,7 +277,8 @@
     <SUITE FILE_PATH="coverage/Yolo_v8$train.coverage" NAME="train 覆盖结果" MODIFIED="1742733250638" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/TrafficSignDetection$CameraTest.coverage" NAME="CameraTest Coverage Results" MODIFIED="1703740241578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/TrafficSignDetection$Myfunc.coverage" NAME="Myfunc Coverage Results" MODIFIED="1703737052951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Yolo_v8$auto_git_push__2_.coverage" NAME="auto_git_push (2) 覆盖结果" MODIFIED="1742731512690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/auto_git_push" />
+    <SUITE FILE_PATH="coverage/auto_git_push_py$train.coverage" NAME="train 覆盖结果" MODIFIED="1742784871470" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Yolo_v8$auto_git_push__2_.coverage" NAME="auto_git_push (2) 覆盖结果" MODIFIED="1742733301067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/auto_git_push" />
     <SUITE FILE_PATH="coverage/Yolo_v8$auto_git_push.coverage" NAME="auto_git_push 覆盖结果" MODIFIED="1742727961147" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Yolo_v8$clean_labels.coverage" NAME="clean_labels 覆盖结果" MODIFIED="1742732664319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Testing$MainProgram.coverage" NAME="MainProgram Coverage Results" MODIFIED="1729753568805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
