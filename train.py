@@ -1,5 +1,6 @@
-# 训练脚本（无任何中文字符）
+# 训练脚本
 from ultralytics import YOLO
+import multiprocessing  # 导入 multiprocessing 模块
 
 # 基础配置
 model = YOLO('yolov8n.pt')  # 预训练模型
@@ -11,7 +12,9 @@ config = {
 }
 
 # 启动训练
-results = model.train(**config)
+def main():
+    results = model.train(**config)
 
 if __name__ == '__main__':
-    main()
+    multiprocessing.freeze_support()  # 调用 freeze_support()
+    main()  # 调用主函数
