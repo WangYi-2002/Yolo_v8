@@ -1,0 +1,96 @@
+[33mcommit 9a4eb8af4a5ce2e6d9333ceadbd67802a937471d[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: DmWang02 <1813360323@qq.com>
+Date:   Mon Mar 24 11:29:53 2025 +0800
+
+    tasks有警告,添加 weights_only=True
+    重新下载官方模型
+
+[33mcommit 832ea397abbc7953ee466b287dfcebc9a729f536[m
+Author: DmWang02 <1813360323@qq.com>
+Date:   Sun Mar 23 20:36:12 2025 +0800
+
+    Auto commit 2025-03-23 20:36:12
+
+[33mcommit 7e1e94faddb7119da2e0781df267bf1bce6f302b[m
+Author: DmWang02 <1813360323@qq.com>
+Date:   Sun Mar 23 20:35:18 2025 +0800
+
+    手动提交: bug修复 (2025-03-23 20:35:18)
+
+[33mcommit 48a0ba047ae8ccd7f0439aac504dd76a25d33941[m
+Author: DmWang02 <1813360323@qq.com>
+Date:   Sun Mar 23 20:17:42 2025 +0800
+
+    Auto commit 2025-03-23 20:17:42
+
+[33mcommit 7fc383cf99b221b1bb38ddb9f6be16d22115c310[m
+Author: DmWang02 <1813360323@qq.com>
+Date:   Sun Mar 23 20:13:14 2025 +0800
+
+    Auto commit 2025-03-23 20:13:14
+
+[33mcommit 63ebf7e0948ddbc928eec4eeafa2d9687ae28cf5[m
+Author: DmWang02 <1813360323@qq.com>
+Date:   Sun Mar 23 20:10:58 2025 +0800
+
+    Auto commit 2025-03-23 20:10:58
+
+[33mcommit 448835c9f335a3494b7092d8891e577e9c862d50[m
+Author: DmWang02 <1813360323@qq.com>
+Date:   Sun Mar 23 20:08:42 2025 +0800
+
+    Auto commit 2025-03-23 20:08:42
+
+[33mcommit defa7544b05fdddcdd579a56a93b7dd55e5aaeda[m
+Author: DmWang02 <1813360323@qq.com>
+Date:   Sun Mar 23 20:06:26 2025 +0800
+
+    Auto commit 2025-03-23 20:06:26
+
+[33mcommit 6eea5f2853cb19ded1c6f14ee0baae921d31d17d[m
+Author: DmWang02 <1813360323@qq.com>
+Date:   Sun Mar 23 19:36:55 2025 +0800
+
+    Default Changelist
+
+[33mcommit 792f991795be894c0988b01bd678101d97b8ffab[m
+Author: DmWang02 <1813360323@qq.com>
+Date:   Sun Mar 23 19:33:01 2025 +0800
+
+    Auto commit 2025-03-23 19:33:01
+
+[33mcommit 0682c3dcea852555e2bb6e6e85da33cb66c14672[m
+Author: DmWang02 <1813360323@qq.com>
+Date:   Sun Mar 23 19:32:11 2025 +0800
+
+    手动提交: bug修复 (2025-03-23 19:32:11)
+
+[33mcommit da7c9fefb83a7b1fb896feb6554e48a8775e90b5[m
+Author: DmWang02 <1813360323@qq.com>
+Date:   Sun Mar 23 18:12:05 2025 +0800
+
+    手动提交: 测试2 (2025-03-23 18:12:05)
+
+[33mcommit 81b36d03c07c5a5d8e58bd41ba6b123600a20558[m
+Author: DmWang02 <1813360323@qq.com>
+Date:   Sun Mar 23 18:10:30 2025 +0800
+
+    手动提交: 测试1 (2025-03-23 18:10:29)
+
+[33mcommit 310a5dfeb472e771b238bc1002fca30aa2285285[m
+Author: DmWang02 <1813360323@qq.com>
+Date:   Sun Mar 23 18:08:26 2025 +0800
+
+    手动提交 2025-03-23 18:08:26
+
+[33mcommit 2fafdc6f5155145ceb320a3b58fbef5780b053b1[m
+Author: DmWang02 <1813360323@qq.com>
+Date:   Sun Mar 23 18:07:21 2025 +0800
+
+    手动提交 2025-03-23 18:07:21
+
+[33mcommit 93d1a90572f364560cdf0be9a22e79f5ca709c95[m
+Author: DmWang02 <1813360323@qq.com>
+Date:   Sun Mar 23 17:37:02 2025 +0800
+
+    Initial commit
