@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="ui">
+    <file>imgs/exit.png</file>
+    <file>imgs/upload.png</file>
+  </qresource>
+</RCC>

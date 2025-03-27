@@ -1,10 +1,7 @@
 from ultralytics import YOLO
-# -*- coding: utf-8 -*-
-# Load a pretrained YOLO11n model
-#model = YOLO("yolo11n.pt")
-model = YOLO("yolov8n.pt")  # 注意正确的名称是 yolov8n.pt
-# Define path to the image file
-source = "ultralytics/assets/bus.jpg"
 
-# Run inference on the source
-results = model(source)  # list of Results objects
+# 加载训练好的模型
+model = YOLO("runs/detect/train/weights/best.pt")
+
+# 预测示例
+results = model.predict("C:/Users/wy199/Desktop/Snipaste_2025-03-27_11-28-43.png", save=True)

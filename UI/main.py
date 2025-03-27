@@ -1,109 +1,109 @@
-import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QLabel, QFileDialog, \
-    QProgressBar, QGraphicsView, QGraphicsScene
-from PyQt5.QtGui import QPixmap
-from PyQt5.QtCore import Qt, QTimer
+from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QLabel, QVBoxLayout, QWidget
+from PyQt5.QtCore import Qt, QPoint
+from PyQt5.QtGui import QPixmap, QPainterPath, QRegion
 
 
-class FruitRecognitionUI(QWidget):
+class FruitRecognitionUI(QMainWindow):
     def __init__(self):
         super().__init__()
+        self.setWindowTitle("水果识别系统")  # 设置窗口标题
+        self.setGeometry(100, 100, 900, 600)  # 设置窗口初始位置和大小
+        self.setWindowFlags(Qt.FramelessWindowHint)  # 隐藏自带的导航栏，创建无边框窗口
 
-        self.setWindowTitle("水果识别系统")
-        self.setGeometry(100, 100, 800, 600)
+        # 变量用于窗口拖动
+        self.old_pos = None
 
-        # 创建主布局
-        main_layout = QHBoxLayout()
+        # 设置窗口的圆角
+        self.set_round_corners()
 
-        # 左侧布局
-        left_layout = QVBoxLayout()
+        # 自定义导航栏
+        self.navbar = QWidget(self)
+        self.navbar.setGeometry(0, 0, 900, 40)
+        self.navbar.setStyleSheet("background-color: #2C3E50; color: white;")
+        self.navbar.mousePressEvent = self.start_move  # 绑定鼠标按下事件
+        self.navbar.mouseMoveEvent = self.moving  # 绑定鼠标移动事件
+        self.navbar.mouseReleaseEvent = self.end_move  # 绑定鼠标释放事件
 
-        # 功能按钮区域（上下分布）
-        self.button_layout = QVBoxLayout()
-        self.load_button = QPushButton("上传图片")
-        self.predict_button = QPushButton("开始识别")
-        self.button_layout.addWidget(self.load_button)
-        self.button_layout.addWidget(self.predict_button)
-        left_layout.addLayout(self.button_layout)
+        # 关闭按钮
+        self.close_btn = QPushButton("✖", self.navbar)
+        self.close_btn.setGeometry(860, 5, 30, 30)
+        self.close_btn.setStyleSheet(
+            "background: none; color: white; font-size: 16px; border-radius: 15px; padding: 5px;")
+        self.close_btn.setCursor(Qt.PointingHandCursor)  # 设置鼠标悬停样式
+        self.close_btn.clicked.connect(self.close)  # 绑定关闭窗口事件
+        self.close_btn.enterEvent = self.on_hover  # 绑定鼠标进入事件
+        self.close_btn.leaveEvent = self.on_leave  # 绑定鼠标离开事件
 
-        # 图片展示区，调整为较小的尺寸
-        self.image_label = QLabel("未上传图片")
-        self.image_label.setAlignment(Qt.AlignCenter)
-        self.image_label.setFixedSize(400, 200)  # 控制图片区域大小
-        left_layout.addWidget(self.image_label)
+        # 左侧功能区
+        self.left_widget = QWidget(self)
+        self.left_widget.setGeometry(0, 40, 200, 560)
+        self.left_widget.setStyleSheet("background-color: #34495E;")
 
-        # 右侧布局
-        right_layout = QVBoxLayout()
+        # 上传图片按钮
+        self.upload_btn = QPushButton("上传图片", self.left_widget)
+        self.upload_btn.setGeometry(30, 50, 140, 40)
 
-        # 预测结果展示
-        self.result_label = QLabel("预测结果: 未识别")
-        self.result_label.setAlignment(Qt.AlignCenter)
-        right_layout.addWidget(self.result_label)
+        # 开始检测按钮
+        self.detect_btn = QPushButton("开始检测", self.left_widget)
+        self.detect_btn.setGeometry(30, 100, 140, 40)
 
-        # 显示预测图片
-        self.result_image_label = QLabel("预测结果图片")
-        self.result_image_label.setAlignment(Qt.AlignCenter)
-        self.result_image_label.setFixedSize(400, 200)  # 控制图片区域大小
-        right_layout.addWidget(self.result_image_label)
+        # 右侧识别结果显示区域
+        self.result_label = QLabel("识别结果显示区", self)
+        self.result_label.setGeometry(600, 100, 280, 400)
+        self.result_label.setStyleSheet("background-color: white; border: 1px solid #ccc;")
 
-        # 进度条和预测结果文字显示
-        self.progress_bar = QProgressBar()
-        self.progress_bar.setRange(0, 100)
-        self.progress_bar.setValue(0)
-        self.result_text_label = QLabel("正在预测...")
+        # 图片展示区
+        self.image_label = QLabel(self)
+        self.image_label.setGeometry(220, 100, 360, 400)
+        self.image_label.setStyleSheet("border: 1px solid #ccc;")
 
-        # 设置进度条
-        self.progress_layout = QVBoxLayout()
-        self.progress_layout.addWidget(self.progress_bar)
-        self.progress_layout.addWidget(self.result_text_label)
-        right_layout.addLayout(self.progress_layout)
+    def set_round_corners(self):
+        """设置窗口的圆角效果"""
+        path = QPainterPath()
+        path.addRoundedRect(0, 0, self.width(), self.height(), 20, 20)
+        region = QRegion(path.toFillPolygon().toPolygon())
+        self.setMask(region)
 
-        # 将左右布局添加到主布局中
-        main_layout.addLayout(left_layout)
-        main_layout.addLayout(right_layout)
+    def resizeEvent(self, event):
+        """当窗口大小调整时，保持圆角"""
+        self.set_round_corners()
+        super().resizeEvent(event)
 
-        # 设置主窗口布局
-        self.setLayout(main_layout)
+    def set_image(self, image_path):
+        """设置图片展示区的图片"""
+        pixmap = QPixmap(image_path).scaled(360, 400, Qt.KeepAspectRatio)
+        self.image_label.setPixmap(pixmap)
 
-        # 连接信号和槽
-        self.load_button.clicked.connect(self.load_image)
-        self.predict_button.clicked.connect(self.start_prediction)
+    def start_move(self, event):
+        """记录鼠标按下位置，以便拖动窗口"""
+        if event.button() == Qt.LeftButton:
+            self.old_pos = event.globalPos()
 
-    def load_image(self):
-        # 选择图片文件
-        options = QFileDialog.Options()
-        file_name, _ = QFileDialog.getOpenFileName(self, "选择图片", "", "所有文件 (*)", options=options)
+    def moving(self, event):
+        """拖动窗口"""
+        if self.old_pos is not None and event.buttons() == Qt.LeftButton:
+            delta = event.globalPos() - self.old_pos
+            self.move(self.x() + delta.x(), self.y() + delta.y())
+            self.old_pos = event.globalPos()
 
-        if file_name:
-            # 更新图片展示区
-            pixmap = QPixmap(file_name)
-            pixmap = pixmap.scaled(self.image_label.size(), Qt.KeepAspectRatio)
-            self.image_label.setPixmap(pixmap)
+    def end_move(self, event):
+        """鼠标释放后停止拖动"""
+        self.old_pos = None
 
-    def start_prediction(self):
-        # 模拟开始识别
-        self.progress_bar.setValue(0)
-        self.result_text_label.setText("正在预测...")
+    def on_hover(self, event):
+        """当鼠标悬停在关闭按钮上时，改变按钮样式"""
+        self.close_btn.setStyleSheet(
+            "background: red; color: white; font-size: 16px; border-radius: 15px; padding: 5px;")
 
-        # 模拟预测过程
-        for i in range(101):
-            QTimer.singleShot(i * 50, lambda value=i: self.update_progress(value))
-
-    def update_progress(self, value):
-        # 更新进度条
-        self.progress_bar.setValue(value)
-
-        # 模拟识别完成
-        if value == 100:
-            self.result_text_label.setText("预测完成")
-            # 更新预测结果图像（模拟）
-            pixmap = QPixmap("result_image.png")  # 这里可以替换成实际的预测结果图片路径
-            pixmap = pixmap.scaled(self.result_image_label.size(), Qt.KeepAspectRatio)
-            self.result_image_label.setPixmap(pixmap)
-            self.result_label.setText("预测结果: 水果A")  # 根据实际预测结果更新
+    def on_leave(self, event):
+        """当鼠标离开关闭按钮时，恢复原样式"""
+        self.close_btn.setStyleSheet(
+            "background: none; color: white; font-size: 16px; border-radius: 15px; padding: 5px;")
 
 
 if __name__ == "__main__":
+    import sys
+
     app = QApplication(sys.argv)
     window = FruitRecognitionUI()
     window.show()
